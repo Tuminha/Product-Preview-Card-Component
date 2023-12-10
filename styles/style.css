@@ -1,0 +1,198 @@
+/* Layout */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: var(--cream-bg, #F2EAE2);
+  }
+  
+  /* Colors */
+  :root {
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+  }
+  
+  /* Typography */
+  body {
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Fraunces', serif;
+  }
+  
+  /* Font weights */
+  .font-weight-500 {
+    font-weight: 500;
+  }
+  
+  .font-weight-700 {
+    font-weight: 700;
+  }
+
+
+.product-box {
+    
+    max-width: 600px;
+    width: 100%;
+    height: 450px;
+    border-radius: 10px;
+    display: inline-flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+
+
+.product-image {
+    object-fit: cover; /* This will scale the image to cover the div while maintaining its aspect ratio */
+    object-position: left; /* This will position the image to the right */
+    width: 50%;
+    height: 100%;
+    background-image: url(../images/image-product-desktop.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 450px;
+    
+}
+
+.product-info {
+    width: 60%;
+    height: 100%;
+    background-color: var(--white);
+    padding: 0px 32px 0 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+    box-sizing: border-box;
+    z-index: 2;
+}
+
+.article-p {
+    letter-spacing: 5px;
+    color: var(--Aurometal-Saurus, #6C7289);
+    font-feature-settings: 'clig' off, 'liga' off;  
+    margin-top: 32px;
+
+}
+
+.main-heading {
+    font-family: Fraunces;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px; /* 100% */
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+
+.intro-p {
+    color: var(--Aurometal-Saurus, #6C7289);
+    font-feature-settings: 'clig' off, 'liga' off;
+    /* Body */
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 23px; /* 164.286% */
+}
+
+.prices {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    gap: 16px;
+}
+
+button {
+    border-radius: 8px;
+    background: var(--Deep-Aquamarine, #3D8168);
+    color: var(--Pure-White, #FFF);
+    font-feature-settings: 'clig' off, 'liga' off;
+    /* Button Text */
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    width: 100%;
+    height: 48px;
+    border-style: none;
+}
+
+.price-correct {
+    color: var(--Deep-Aquamarine, #3D8168);
+
+}
+
+.price-old {
+    text-decoration: line-through;
+}
+
+button:hover {
+    background: var(--deep-aquamarine-hover, #1A4032);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 375px) {
+    body {
+        display: flex;
+        width: 100%; /* Adjust to 100% to fit the screen width */
+        padding: 5%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .product-box {
+        flex-direction: column;
+        width: 100%; /* Adjust to 100% to fit the screen width */
+        height: auto; /* Adjust to auto to fit the content */
+    }
+
+    .product-image {
+        width: 100%; /* Adjust to 100% to fit the screen width */
+        height: 411px; /* Adjust to auto to fit the content */
+    }
+
+    .article-p {
+        margin-top: 10px;
+    }
+
+    .product-info {
+        width: 100%; /* Adjust to 100% to fit the screen width */
+        height: auto; /* Adjust to auto to fit the content */
+        padding: 10px 20px 23px 20px;
+        text-align: left;
+    }
+
+    .intro-p {
+        margin: 0;
+    }
+
+    .prices {
+        flex-direction: row; /* Stack the prices vertically */
+        gap: 15px;
+    }
+
+    button {
+        width: 100%; /* Adjust to 100% to fit the screen width */
+    }
+}
+
